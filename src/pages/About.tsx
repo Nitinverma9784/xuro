@@ -92,7 +92,7 @@ export default function AboutPage() {
 
             {/* Stats Section */}
             <div className="grid md:grid-cols-4 gap-6">
-              {stats.map((stat, index) => (
+              {stats.map((stat) => (
                 <div
                   key={stat.label}
                   className="bg-gray-900/20 border border-gray-800/30 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-gray-900/60 hover:border-gray-700/50 transition-all duration-300"
@@ -106,7 +106,7 @@ export default function AboutPage() {
 
             {/* Features Grid */}
             <div className="grid md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <Card
                   key={feature.title}
                   className="bg-gray-900/20 border-gray-800/30 backdrop-blur-sm h-full rounded-xl hover:bg-gray-900/60 hover:border-gray-700/50 transition-all duration-300"
@@ -170,7 +170,7 @@ export default function AboutPage() {
               <div className="bg-gray-900/20 border border-gray-800/30 backdrop-blur-sm rounded-2xl p-8 hover:bg-gray-900/60 hover:border-gray-700/50 transition-all duration-500">
                 <h2 className="text-3xl font-bold mb-6 text-white text-center">Powered By Modern Technology</h2>
                 <div className="flex flex-wrap justify-center gap-3 mb-6">
-                  {technologies.map((tech, index) => (
+                  {technologies.map((tech) => (
                     <Badge
                       key={tech}
                       variant="secondary"

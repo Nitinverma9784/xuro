@@ -230,10 +230,7 @@ export default function CommunityPage() {
     toast.success("Code copied to clipboard!")
   }
 
-  const handleLike = (id: string) => {
-    toast.success("Component liked!")
-  }
-
+ 
   const handleDownload = (component: Component) => {
     const blob = new Blob([component.code], { type: "text/plain" })
     const url = URL.createObjectURL(blob)
@@ -307,7 +304,7 @@ export default function CommunityPage() {
 
           {/* Components Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredComponents.map((component, index) => (
+            {filteredComponents.map((component) => (
               <Card
                 key={component.id}
                 className="bg-gray-900/40 border-gray-700/30 backdrop-blur-sm hover:bg-gray-900/60 hover:border-gray-600/50 transition-all duration-300 h-full"
