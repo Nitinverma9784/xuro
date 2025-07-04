@@ -12,7 +12,7 @@ import { useState } from "react"
 
 import { toast } from "sonner"
 import {Link} from "react-router-dom"
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router"
 
 export default function HomePage() {
   const [prompt, setPrompt] = useState("")
@@ -30,6 +30,7 @@ export default function HomePage() {
   ]
 
   const handleImport = (platform: string) => {
+    console.log(`Importing from ${platform}`)
     toast.success("Coming Soon!", {
       description: `${platform} import will be available soon.`,
     })
@@ -82,7 +83,7 @@ export default function HomePage() {
   className="min-h-screen bg-gray-950 relative overflow-hidden"
 >
   {/* Grid pattern */}
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
   
 
 
@@ -241,6 +242,8 @@ export default function HomePage() {
       </section>
 
       <Footer />
+
+    
     </motion.div>
   )
 }
